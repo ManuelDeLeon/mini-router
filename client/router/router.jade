@@ -1,0 +1,11 @@
+body
+  +router
+
+template(name='router')
+  if layoutName
+    +UI.dynamic template=layoutName data=templateData
+  else
+    +UI.dynamic template=templateName data=templateData
+
+template(name='yield')
+  +UI.dynamic template=templateName data=templateData
